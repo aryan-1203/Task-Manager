@@ -1,2 +1,3 @@
 # Task-Manager
-I developed a task management system for our office using the Django framework, handling the entire frontend from scratch.
+I developed a task management system for our office using the Django framework, handling the entire front end from scratch. This involved integrating backend Django codes with HTML templates, styling pages per requirements, and implementing JavaScript event listeners for buttons, table cells, and page reloads.
+Following an approved DDL change, I conducted extensive code optimizations on both the backend and front end, deepening my understanding of Django components such as models.py, views.py, urls.py, and settings.py. I also migrated the default Django database to MySQL, which involved learning database querying, table column creation, and script writing. This project provided comprehensive experience across frontend, backend, and database management.
