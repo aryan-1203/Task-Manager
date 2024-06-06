@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+{% load static %}
+{% block content %}
+<div class="register">
+    <img src="{% static 'images/background-bg.jpg' %}" class="login-bg">
+
+<div class="register-container">
+    
+    <h2 class="register-title"></h2>
+    <div class="register-form lifted">
+        <div style="text-align: center;">
+            <h2>Register</h2>
+        </div>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="registerbtn" type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</div>
+</div>
+
+<style>
+    .register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.login-bg {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* This places the image behind other elements in the container */
+}
+
+.register-container {
+    background-color: rgba(255, 255, 255); /* Use rgba to add some transparency */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the form appears above the background image */
+}
+
+</style>
+{% endblock %}

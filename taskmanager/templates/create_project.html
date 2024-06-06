@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="project-form">
+    <h2>Create a New Project</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <div class="input-group">
+          {{ form.project_form.project_name.label_tag }}
+          {{ form.project_form.project_name }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          {{ form.project_form.project_description.label_tag }}
+          {{ form.project_form.project_description }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          {{ form.project_form.start_date.label_tag }}
+          {{ form.project_form.start_date }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-group">
+          {{ form.project_form.end_date.label_tag }}
+          {{ form.project_form.end_date }}
+        </div>
+      </div>
+
+      <button type="submit" class="create_projectbtn">Create Project</button>
+    </form>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .project-form {
+      background-color: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 600px; /* Adjust the width as needed */
+      height: 500px; /* Adjust the height as needed */
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button.create_projectbtn {
+      width: 100%;
+    }
+  </style>
+{% endblock %}

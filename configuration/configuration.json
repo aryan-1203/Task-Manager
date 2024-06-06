@@ -1,0 +1,21 @@
+{
+    "dataSources": {
+        "financeApp": {
+            "host": "127.0.0.1",
+            "port": 3306,
+            "schema": "Finance app",
+            "user": "user",
+            "password": "password"
+        },
+        "taskmanager": {
+            "host": "127.0.0.1",
+            "port": 3306,
+            "schema": "taskmanager",
+            "user": "user",
+            "password": "password"
+        }
+    },
+    "parameters": {
+        "env": "dev"
+    }
+}
